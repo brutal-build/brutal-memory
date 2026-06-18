@@ -23,7 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# sql.js WASM files (loaded from CDN)
+# sql.js WASM files (loaded locally from /public)
 *.wasm
+!public/*.wasm
 
 .vercel
