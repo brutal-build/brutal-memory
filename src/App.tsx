@@ -65,7 +65,7 @@ function App() {
       {/* Top bar */}
       <div className="border-b-2 border-white/10 px-6 py-3 flex items-center justify-between">
         <div className="text-white font-bold text-lg tracking-wider">
-          {'{'}Brutal Memory Browser{'}'}
+          {'{'}Brutal Memory{'}'}
         </div>
         <div className="flex gap-2">
           <BracketButton onClick={() => setShowDetails(!showDetails)}>

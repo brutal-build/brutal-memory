@@ -1,23 +1,22 @@
-🚀 **Brutal Memory Browser** — Hermes Agent `state.db` viewer/explorer
+Brutal Memory — Hermes Agent state.db viewer
 
-W pełni kliencka web app do przeglądania wszystkich rozmów z Hermes Agentem. Zero backendu, zero uploadów — przeciągasz `state.db` do przeglądarki i masz całą historię sesji.
+A fully client-side web app for browsing all your Hermes Agent conversations. No backend, no uploads — just drag your state.db file into the browser and explore your session history.
 
-✨ **Funkcje:**
-• Drop & Browse — przeciągnij plik, od razu widzisz wszystkie sesje
-• Filtrowanie po źródle (tui, telegram, cron, discord…)
-• Search po tytule z debounce 300ms
-• Sortowanie: newest / oldest / most messages / most tokens
-• Szczegóły sesji: model, źródło, czas trwania, tokeny, tool calls
-• Podgląd rozmów: user / assistant / tool z parsowaniem JSON content
-• Eksport: pojedyncza sesja → .md, wszystkie → .json lub .zip z .md
+Features:
+- Drop & browse — drag a file, instantly see all sessions
+- Filter by source (tui, telegram, cron, discord, etc.)
+- Search by title with 300ms debounce
+- Sort by newest, oldest, most messages, or most tokens
+- Session details: model, source, duration, tokens, tool calls
+- Chat view with user/assistant/tool messages and JSON content parsing
+- Export single session as .md, all sessions as .json or .zip of .md files
 
-🎨 **Styl:** BRUTALIST — czarne tło, białe teksty, border-2, [ bracket buttons ], zero border-radius. Idealnie do Hermesowego klimatu.
+Stack: Vite 6 + React 19 + TypeScript + Tailwind v4.3 + sql.js (SQLite WASM) + zustand
 
-🔧 **Stack:** Vite 6 + React 19 + TS + Tailwind v4.3 + sql.js (SQLite WASM) + zustand
+Design: Minimalist monospace — black background, white text, 2px borders, bracket-style buttons, zero border-radius.
 
-📦 **GitHub:** github.com/brutal-build/brutal-memory-browser
-
-🖥️ **Live demo:** brutal-memory-browser.vercel.app
+GitHub: https://github.com/brutal-build/brutal-memory-browser
+Live demo: https://brutal-memory.vercel.app
 
 ```
 git clone https://github.com/brutal-build/brutal-memory-browser.git
@@ -26,4 +25,4 @@ npm install
 npm run dev
 ```
 
-Wrzućcie swoje state.db i zobaczcie jak wygląda Wasza historia z Hermesem. Feedback mile widziany!
+Drop your state.db and see what your Hermes history looks like. Feedback welcome.
