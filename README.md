@@ -1,101 +1,90 @@
-<div align="center">
-  <h1>Brutal Memory Browser</h1>
-</div>
+<h1 align="center">Brutal Memory</h1>
 
-<p align="center">
-  <strong>Brutalist web app for browsing and exporting Hermes Agent conversations.</strong>
-  <br />
-  Built with React, Vite, and sql.js.
-</p>
+> <p align="center">A brutalist web app for browsing and exporting conversations from Hermes Agent's <code>state.db</code>. Zero backend, zero uploads — everything runs in your browser.</p>
 
-<p align="center">
-  <a href="https://brutal-memory.vercel.app/">Live Demo</a> ·
-  <a href="#features">Features</a> ·
-  <a href="#usage">Usage</a> ·
-  <a href="#stack">Stack</a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="build" />
-  <img src="https://img.shields.io/badge/vite-6-blue" alt="vite" />
-  <img src="https://img.shields.io/badge/react-19-blue" alt="react" />
-  <img src="https://img.shields.io/badge/typescript-5-blue" alt="ts" />
-  <img src="https://img.shields.io/badge/license-MIT-white" alt="license" />
-</p>
+<p align="center">Built with <strong>Vite 6</strong> + <strong>React 19</strong> + <strong>TypeScript</strong> + <strong>Tailwind CSS v4</strong>. Drop your SQLite database file and browse all your AI conversations locally.</p>
 
 ---
 
-## Overview
-
-Brutal Memory Browser is a client-side web application that reads Hermes Agent's `state.db` SQLite database directly in your browser. Drop your database file and instantly browse, search, and export all your agent conversations — without uploading anything to a server.
-
-**Everything runs locally. Your data never leaves your machine.**
-
 ## Features
 
-- **Drop & Browse** — drag your `state.db` file or click to select
-- **Session List** — all conversations sorted by date, with auto-generated titles
+- **Drop & Browse** — drag your `state.db` file into the browser
+- **Session List** — all conversations sorted by date
 - **Search** — filter sessions by title with debounced input
-- **Filters** — by source (tui, telegram, cron, discord), archived status, and sort order
-- **Chat View** — properly formatted conversations with user, assistant, and tool messages
-- **Session Details** — model, source, duration, token counts, tool calls, rewinds
-- **Stats Bar** — total sessions, messages, and tokens at a glance
+- **Filters** — source (tui, telegram, cron, discord…), archived status, sort order
+- **Chat View** — read conversations with proper formatting
+- **Session Details** — model, source, duration, token counts, tool calls
 - **Export** — single session as `.md`, all sessions as `.json` or `.zip` of `.md` files
 
-## Usage
+---
+
+## Quick Start
+
+### Prerequisites
+
+- **Node.js 20+**
+
+### 1. Clone and install
 
 ```bash
 git clone https://github.com/brutal-build/brutal-memory
 cd brutal-memory
 npm install
+```
+
+### 2. Run
+
+```bash
 npm run dev
 ```
 
-Or visit the live demo at [brutal-memory.vercel.app](https://brutal-memory.vercel.app).
+Opens at `http://localhost:5173`.
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+Or visit the live demo: **[brutal-memory.vercel.app](https://brutal-memory.vercel.app)**
+
+---
+
+## Usage
 
 1. Open the app
-2. Drag your `state.db` file onto the page or click `[ SELECT FILE ]`
-3. Browse, search, filter, and export your sessions
+2. Click `[ SELECT FILE ]` or drag your `state.db` file onto the page
+3. Browse your sessions
 
-> **Your database stays in your browser. Nothing is uploaded.**
+> Your database stays in your browser. Nothing is uploaded.
+
+---
 
 ## Where is state.db?
 
 | Platform | Location |
-|---|---|
+|----------|----------|
 | Windows | `%LOCALAPPDATA%/hermes/profiles/<profile>/state.db` |
 | macOS | `~/Library/Application Support/hermes/profiles/<profile>/state.db` |
 | Linux | `~/.local/share/hermes/profiles/<profile>/state.db` |
 
-## Stack
+---
 
-| Technology | Purpose |
-|---|---|
-| React 19 | UI framework |
-| TypeScript | Type safety |
-| Vite 6 | Build tooling |
-| Tailwind CSS v4.3 | Styling |
-| sql.js | SQLite in the browser (WebAssembly) |
-| zustand | State management |
-| JSZip | Export sessions as `.zip` |
-| react-markdown | Render conversation content |
+## Tech Stack
 
-## Design
+| Layer | Tech |
+|-------|------|
+| Framework | React 19 |
+| Bundler | Vite 6 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Database | sql.js (SQLite → WebAssembly) |
+| State | zustand |
+| Export | JSZip |
+| Hosting | Vercel |
 
-Brutalist monospace aesthetic — pure black background, white text, 2px borders, bracket-style `[ buttons ]`, zero border-radius, zero shadows, zero gradients.
+---
 
 ## License
 
-MIT — free to use, modify, and distribute.
-
----
-
-<p align="center">
-  <a href="https://ko-fi.com/brutalbuild"><img src="https://img.shields.io/badge/Support%20me-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white" alt="Ko-fi" /></a>
-</p>
-
----
-
-<p align="center">
-  <sub>Built by <a href="https://github.com/brutal-build">brutal-build</a></sub>
-</p>
+MIT — [brutal-build](https://github.com/brutal-build)
